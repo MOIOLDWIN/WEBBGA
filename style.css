@@ -1,6 +1,4 @@
-/* =====================
-   RESET Y BASE
-===================== */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,22 +6,19 @@
 }
 
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #f4fbff; /* celeste bebé */
-    color: #2b2b2b;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f2faff; /* celeste bebé */
+    color: #2c2c2c;
     line-height: 1.7;
 }
 
-/* =====================
-   BARRA SUPERIOR FIJA
-===================== */
+/* ================= BARRA SUPERIOR ================= */
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     background: linear-gradient(90deg, #bfe9ff, #ffd6b0);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 1000;
 }
 
@@ -37,9 +32,9 @@ header {
 }
 
 .navbar h1 {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.3rem;
     color: #0b4f6c;
+    font-weight: 700;
 }
 
 .navbar ul {
@@ -52,129 +47,102 @@ header {
     text-decoration: none;
     color: #0b4f6c;
     font-weight: 500;
-    transition: color 0.2s ease;
 }
 
 .navbar a:hover {
     color: #ff8c42;
 }
 
-/* =====================
-   CONTENIDO GENERAL
-===================== */
+/* ================= CONTENIDO ================= */
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 8rem 2rem 3rem; /* espacio por barra fija */
+    padding: 7rem 2rem 3rem;
 }
 
-/* =====================
-   HERO / TEMA
-===================== */
-.hero {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 4rem;
+/* ================= BLOQUES GENERALES ================= */
+section {
+    margin-bottom: 3.5rem;
 }
 
-.hero img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 14px;
-}
-
-.hero-text {
+.section-box {
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.hero-text h2 {
-    color: #0b4f6c;
-    margin-bottom: 1rem;
-}
-
-.hero-text p {
-    font-size: 1.05rem;
-}
-
-/* =====================
-   SECCIONES
-===================== */
-.section {
-    margin-bottom: 4rem;
-}
-
-.section h2 {
+/* ================= TÍTULOS ================= */
+h2 {
     color: #0b4f6c;
     margin-bottom: 1rem;
     border-left: 6px solid #ffb703;
     padding-left: 0.8rem;
 }
 
-.section p {
-    margin-bottom: 1rem;
-    text-align: justify;
+h3 {
+    color: #ff8c42;
+    margin: 1.2rem 0 0.5rem;
 }
 
-/* =====================
-   VARIABLES
-===================== */
+/* ================= TEXTO ================= */
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+/* ================= HERO / TEMA ================= */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* ================= VARIABLES ================= */
 .variables {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.variable-box {
-    background: #ffffff;
+.variable {
+    background-color: #ffffff;
     padding: 1.8rem;
     border-radius: 14px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.variable-box h3 {
-    color: #ff8c42;
-    margin-bottom: 0.6rem;
-}
-
-/* =====================
-   IMÁGENES INTERMEDIAS
-===================== */
+/* ================= IMÁGENES INTERMEDIAS ================= */
 .image-block {
     margin: 2.5rem 0;
 }
 
 .image-block img {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: cover;
     border-radius: 16px;
 }
 
-/* =====================
-   FUNDAMENTACIÓN
-===================== */
+/* ================= FUNDAMENTACIÓN ================= */
 .card {
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     margin-bottom: 2rem;
 }
 
-.card h3 {
-    color: #0b4f6c;
-    margin-bottom: 0.6rem;
-}
-
-/* =====================
-   FOOTER
-===================== */
+/* ================= FOOTER ================= */
 footer {
     background: linear-gradient(90deg, #0b4f6c, #ff8c42);
     color: white;
@@ -196,9 +164,7 @@ footer {
     opacity: 0.9;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
@@ -219,11 +185,7 @@ footer {
         display: none;
     }
 
-    .navbar h1 {
-        font-size: 1.1rem;
-    }
-
     main {
-        padding: 7rem 1.2rem 2rem;
+        padding: 6rem 1.2rem 2rem;
     }
 }
